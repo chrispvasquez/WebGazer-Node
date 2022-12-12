@@ -5,21 +5,29 @@ const fs = require('fs')
 const port = process.env.PORT || 3003
 const d = new Date();
 
+app.get('/', function (req, res) {
+	//res.sendFile(__dirname + '/public/index.html') // Simple Dot Test
+	res.sendFile(__dirname + '/public/index_test0.html') // Simple Dot Test
+	//res.sendFile(__dirname + '/public/index_test1.html') // Unknown Location Dot Test
+	//res.sendFile(__dirname + '/public/index_test2.html') // Square Tracking Test
+});
+
 app.use(express.static(__dirname + '/public'));
 //app.use(bodyParser())
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit: 1000000}));
 
 
-app.get('/', function (req, res) {
-	res.sendFile(__dirname + '/public/index.html')
 
-});
 
 app.post('/download', function(req, res) {
 	try {
 		var fs = require('fs');
 		var dir  = 'experiment/'.concat((d.getMonth()+1).toString()).concat(d.getDate().toString()).concat('/');
+
+		if (!fs.existsSync('experiment/')){
+		    fs.mkdirSync('experiment/');
+		}
 
 		if (!fs.existsSync(dir)){
 		    fs.mkdirSync(dir);

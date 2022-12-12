@@ -1,0 +1,222 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: absolute;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    left: 50%;
+    top: 50%;
+  }
+
+  .square.active-animation {
+    -webkit-animation: move 50s;
+  }
+  
+  @-webkit-keyframes move {
+    0% {
+      left: 50%;
+      top: 50%;
+      background: green;
+    }
+
+    10% {
+      left: 85%;
+      top: 50%;
+      background: green;
+    }
+
+    20% {
+      left: 50%;
+      top: 50%;
+      background: green;
+    }
+
+    30% {
+      left: 50%;
+      top: 85%;
+      background: green;
+    }
+
+    40% {
+      left: 50%;
+      top: 50%;
+      background: green;
+    }
+
+    50% {
+      left: 30%;
+      top: 50%;
+      background: green;
+    }
+
+    60% {
+      left: 50%;
+      top: 50%;
+      background: green;
+    }
+    70% {
+      left: 50%;
+      top: 30%;
+      background: green;
+    }
+    80% {
+      left: 50%;
+      top: 50%;
+      background: green;
+    }
+
+    90% {
+      left: 75%;
+      top: 75%;
+      background: green;
+    }
+
+    100% {
+      left: 50%;
+      top: 50%;
+      background: blue;
+    }
+  }
+  
+  body {
+    background: white;
+  }
+  
+  .text {
+    font-size: 40px;
+    font-family: impact;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 10%;
+  }
+  
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+button {
+    border-radius: 4px;
+}
+/* Video Feed Styling */
+#overlay {
+/* Video Feed Styling:
+ * Include the !important keyword to override default styles applied by JS.
+ * webgazer.js sets defaults for: display, position, top, left, width, height
+ */
+}
+#webgazerVideoContainer {
+    display: block !important; 
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 320px !important;
+    height: 240px !important;
+    z-index: 1;
+}
+
+/* Navbar styling */
+#webgazerNavbar {
+    left: 320px;
+    z-index: 0;
+    box-shadow: 0px 3px 5px #ddd;
+    border:0px;
+    background-color: #fff;
+}
+
+#Accuracy a{
+    background-color: #222;
+    color: #eee;
+    left: -15px;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+#Accuracy {
+    background-color: #222;
+    padding-left: inherit;
+}
+
+li {
+    padding-left: 50px;
+}
+.navbar-right li {
+    padding-right: 20px;
+}
+
+.helpBtn {
+    padding: 15px;
+    border: none;
+    background: none;
+    color: #777;
+}
+.helpBtn a {
+    background: none;
+    color: #777;
+}
+.helpBtn a:hover {
+    color: black!important;
+    text-decoration: none;
+}
+.modal-header {
+    border-bottom: none!important;
+}
+
+/* Calibration button styling */
+.Calibration{
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color: red;
+    opacity: 0.2;
+    border-color: black;
+    border-style: solid;
+    position:fixed;
+}
+
+/* Calibration point position */
+#Pt1{
+    top: 70px;
+    left:340px;
+}
+#Pt2{
+    top: 70px;
+    left:50vw;
+    margin-left: 340;
+}
+#Pt3{
+    top: 70px;
+    right:2vw;
+}
+#Pt4{
+    top:50vh;
+    left:2vw;
+}
+#Pt5{
+    top: 50vh;
+    left: 50vw;
+}
+#Pt6{
+    top: 50vh;
+    right:2vw;
+}
+#Pt7{
+    bottom:2vw;
+    left: 2vw;
+}
+#Pt8{
+    bottom:2vw;
+    left:50vw;
+}
+#Pt9{
+    bottom:2vw;
+    right:2vw;
+}
